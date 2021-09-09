@@ -3,7 +3,10 @@ import SwiftUI
 /// Provides a convenient 'wrapper' around a UIView
 public struct UIWrapping<V>: View {
     let wrapped: AnyView
+    public var body: some View { wrapped }
+}
 
+extension UIWrapping {
     /// Instantiates a wrapper for a `UIView`
     /// - Parameters:
     ///   - viewProvider: Use this closure to return an instantiated `UIView`
@@ -29,7 +32,9 @@ public struct UIWrapping<V>: View {
             )
         )
     }
+}
 
+extension UIWrapping {
     /// Instantiates a wrapper for the specified viewProvider
     /// - Parameters:
     ///   - viewProvider: Use this closure to return an instantiated `UIView`
@@ -55,8 +60,6 @@ public struct UIWrapping<V>: View {
             )
         )
     }
-
-    public var body: some View { wrapped }
 }
 
 public typealias RepresentableProvider<V> = () -> V
@@ -97,7 +100,7 @@ struct UIWrapping_Preview: PreviewProvider {
     static var previews: some View {
         UIWrapping<UILabel> { view in
             view.numberOfLines = 0
-            view.text = "This is wierd\nDon't you think?"
+            view.text = "Lest enable\nmultiple lines"
             view.textAlignment = .center
         }
         .fixedSize()

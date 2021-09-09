@@ -18,6 +18,12 @@ UIWrapping<UILabel> { view in
 .fixedSize()
 ```
 
+## UIViewBuilder
+
+Works exactly as you'd expect. Essentially just a UIView version-ish of a `ViewBuilder`.
+
+It improves container-like APIs.
+
 ## Installation
 
 The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (**preferred**)

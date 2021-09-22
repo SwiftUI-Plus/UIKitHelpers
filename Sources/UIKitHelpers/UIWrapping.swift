@@ -100,7 +100,7 @@ struct UIWrapping_Preview: PreviewProvider {
     static var previews: some View {
         UIWrapping<UILabel> { view in
             view.numberOfLines = 0
-            view.text = "Lest enable\nmultiple lines"
+            view.text = "Lets enable\nmultiple lines"
             view.textAlignment = .center
         }
         .fixedSize()
